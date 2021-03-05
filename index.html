@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- ... -->
+</head>
+<body>
+  <!-- ... -->
+
+<!-- component -->
+<div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    
+    <div x-data="{ sidebarOpen: false, darkMode: false }" :class="{ 'dark': darkMode }">
+        <div class="flex h-screen bg-gray-100 dark:bg-gray-00 font-roboto">
+    
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <header class="flex justify-between items-center p-6">
+                    <div class="flex items-center space-x-4 lg:space-x-0">
+    
+                        <div>
+                            <h1 class="text-2xl font-medium text-gray-800 dark:text-white">Connect With Me </h1>
+                        </div>
+                    </div>
+    
+                    <div class="flex items-center space-x-4">
+    
+                        <div x-data="{ dropdownOpen: false }" class="relative">
+                            <button @click="dropdownOpen = ! dropdownOpen"
+                                class="flex items-center space-x-2 relative focus:outline-none">
+                                <h2 class="text-gray-700 dark:text-gray-300 text-sm">Mikha Cavin</h2>
+                                <img class="h-9 w-9 rounded-full border-2 border-purple-500 object-cover"
+                                    src="https://raw.githubusercontent.com/mikhacavin/personal-webiste/main/static/assets/mini%20picture.jpg"
+                                    alt="Your avatar">
+                            </button>
+    
+                            <div class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-10"
+                                x-show="dropdownOpen" x-transition:enter="transition ease-out duration-100 transform"
+                                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                                x-transition:leave="transition ease-in duration-75 transform"
+                                x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
+                                @click.away="dropdownOpen = false">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Oh No!</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+    
+                <main class="flex-1 overflow-x-hidden overflow-y-auto">
+                    <div class="container mx-auto px-6 py-8">
+                        <div class="grid place-items-center h-96 text-gray-500 dark:text-gray-300 text-lg">
+                            
+                            <!-- component -->
+								<div class="container mx-auto max-w-sm h-screen flex flex-col space-y-4 items-center">
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://raw.githubusercontent.com/mikhacavin/personal-webiste/main/static/assets/heroweb.jpg" alt="My profile" class="w-12 h-12 rounded-full">
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Official Website 
+									        
+									        	<svg class="h-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+											</svg>
+									      
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/c9dacf0f25a1489fdbc6c0d2b41cda58b77fa210a13a886d6f99e027adfbd358/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f696e7374616772616d2e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Instagram 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/instagram
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									   <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/79fcdc7c43f1a1d7c175827976ffee8177814a016fb1b9578ff70f1aef759578/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f646973636f72642e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Discord 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/discord
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/35b0b8bfbd8840f35607fb56ad0a139047fd5d6e09ceb060c5c6f0a5abd1044c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f747769747465722e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Twitter 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/twitter
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/c8a9c5b414cd812ad6a97a46c29af67239ddaeae08c41724ff7d945fb4c047e5/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6c696e6b6564696e2e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        LinkedIn 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/discord
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/ef99a09dfa010e68c26ec4414631a47bbc1086677227bd97538d051b8b93ae21/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f70696e7465726573742e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Pinterest 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/pinterest
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/6cc90061976bcd4d1a61a6c76b818538b5a65754f7b7b8068fe0fa49a09def8f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6465765f746f2e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Dev.to 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/devto
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/d54e97f5edde790381f7e62b217410df33e066a0dc8f692f2fc6b25fc1768b0c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f796f75747562652e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Youtube 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/youtube
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+
+									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        GitHub 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/github
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+									   <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
+									    <div class="relative flex items-center space-x-4">
+									      <img src="https://cdn.freebiesupply.com/logos/large/2x/dribbble-5-logo-svg-vector.svg" alt="My profile" class="w-12 h-12 rounded-full">
+									      <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
+									    </div>
+									    <div class="flex-grow p-2">
+									      <div class="flex font-semibold text-gray-800">
+									        Dribble 
+									      </div>
+									      <div class="text-sm text-gray-300">
+									        https://mikhacavin.com/dribble
+									      </div>
+									    </div>
+									    <div class="p-2">
+									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
+								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
+								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
+								        </svg>
+									    </div>
+									  </div>
+
+
+								</div>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
