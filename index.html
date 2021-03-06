@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Mikha Cavin </title>
   <!-- ... -->
 </head>
 <body>
   <!-- ... -->
-
 <!-- component -->
 <div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     
-    <div x-data="{ sidebarOpen: false, darkMode: false }" :class="{ 'dark': darkMode }">
-        <div class="flex h-screen bg-gray-100 dark:bg-gray-00 font-roboto">
+    <div>
+        <div class="flex h-screen bg-gray-200 dark:bg-gray-00 font-roboto">
     
             <div class="flex-1 flex flex-col overflow-hidden">
                 <header class="flex justify-between items-center p-6">
                     <div class="flex items-center space-x-4 lg:space-x-0">
     
                         <div>
-                            <h1 class="text-2xl font-medium text-gray-800 dark:text-white">Connect With Me </h1>
+                            <h1 class="text-2xl flex font-medium text-gray-800 dark:text-white">Hello<img class="h-7 p-1" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966" alt=""> </h1>
                         </div>
                     </div>
     
@@ -30,7 +30,7 @@
                         <div x-data="{ dropdownOpen: false }" class="relative">
                             <button @click="dropdownOpen = ! dropdownOpen"
                                 class="flex items-center space-x-2 relative focus:outline-none">
-                                <h2 class="text-gray-700 dark:text-gray-300 text-sm">Mikha Cavin</h2>
+                                <h2 class="text-gray-700 dark:text-gray-400 text-sm">Mikha Cavin</h2>
                                 <img class="h-9 w-9 rounded-full border-2 border-purple-500 object-cover"
                                     src="https://raw.githubusercontent.com/mikhacavin/personal-webiste/main/static/assets/mini%20picture.jpg"
                                     alt="Your avatar">
@@ -43,7 +43,8 @@
                                 x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                                 @click.away="dropdownOpen = false">
                                 <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Cheers!🍻</a>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-300 hover:text-white">Cheers!</a>
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                             </div>
                         </div>
                     </div>
@@ -51,11 +52,12 @@
     
                 <main class="flex-1 overflow-x-hidden overflow-y-auto">
                     <div class="container mx-auto px-6 py-8">
-                        <div class="grid place-items-center h-96 text-gray-500 dark:text-gray-300 text-lg">
+                        <div class="grid place-items-center h-96 text-gray-500 dark:text-gray-400 text-lg">
                             
                             <!-- component -->
 								<div class="container mx-auto max-w-sm h-screen flex flex-col space-y-4 items-center">
 
+									<!-- website -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://raw.githubusercontent.com/mikhacavin/personal-webiste/main/static/assets/heroweb.jpg" alt="My profile" class="w-12 h-12 rounded-full">
@@ -69,20 +71,21 @@
 											</svg>
 									      
 									      </div>
-									      <div class="text-sm text-gray-300">
+									      <div class="text-sm text-gray-400">
 									        https://mikhacavin.com
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+
+									  <!-- instagram -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/c9dacf0f25a1489fdbc6c0d2b41cda58b77fa210a13a886d6f99e027adfbd358/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f696e7374616772616d2e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -92,20 +95,21 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Instagram 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/instagram
+									      <div class="text-sm text-gray-400">
+									        @mikhacavin
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/instagram" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+
+									  <!-- discord -->
 									   <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/79fcdc7c43f1a1d7c175827976ffee8177814a016fb1b9578ff70f1aef759578/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f646973636f72642e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -115,20 +119,20 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Discord 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/discord
+									      <div class="text-sm text-gray-400">
+									        Server CodingChallenge
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/discord" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+									  <!-- twitter -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/35b0b8bfbd8840f35607fb56ad0a139047fd5d6e09ceb060c5c6f0a5abd1044c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f747769747465722e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -138,20 +142,20 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Twitter 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/twitter
+									      <div class="text-sm text-gray-400">
+									        @mikhacavin
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/twitter" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+									  <!-- linkedin -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/c8a9c5b414cd812ad6a97a46c29af67239ddaeae08c41724ff7d945fb4c047e5/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6c696e6b6564696e2e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -161,20 +165,21 @@
 									      <div class="flex font-semibold text-gray-800">
 									        LinkedIn 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/discord
+									      <div class="text-sm text-gray-400">
+									        LinkedIn Mikha Cavin
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/linkedin" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+
+									  <!-- pinterest -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/ef99a09dfa010e68c26ec4414631a47bbc1086677227bd97538d051b8b93ae21/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f70696e7465726573742e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -184,21 +189,21 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Pinterest 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/pinterest
+									      <div class="text-sm text-gray-400">
+									        Check my Pin!
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/pinterest" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
 
+									  <!-- devto -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/6cc90061976bcd4d1a61a6c76b818538b5a65754f7b7b8068fe0fa49a09def8f/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6465765f746f2e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -208,21 +213,20 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Dev.to 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/devto
+									      <div class="text-sm text-gray-400">
+									        @mikhacavin
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/devto" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
-
+									  <!-- youtube -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/d54e97f5edde790381f7e62b217410df33e066a0dc8f692f2fc6b25fc1768b0c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f796f75747562652e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -232,21 +236,21 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Youtube 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/youtube
+									      <div class="text-sm text-gray-400">
+									        Youtube Channel
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/youtube" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
 
+									  <!-- github -->
 									  <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667" alt="My profile" class="w-12 h-12 rounded-full">
@@ -256,20 +260,21 @@
 									      <div class="flex font-semibold text-gray-800">
 									        GitHub 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/github
+									      <div class="text-sm text-gray-400">
+									        @mikhacavin
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/github" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
+
+									  <!-- dribble -->
 									   <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border">
 									    <div class="relative flex items-center space-x-4">
 									      <img src="https://cdn.freebiesupply.com/logos/large/2x/dribbble-5-logo-svg-vector.svg" alt="My profile" class="w-12 h-12 rounded-full">
@@ -279,29 +284,39 @@
 									      <div class="flex font-semibold text-gray-800">
 									        Dribble 
 									      </div>
-									      <div class="text-sm text-gray-300">
-									        https://mikhacavin.com/dribble
+									      <div class="text-sm text-gray-400">
+									        Check my Shoot!
 									      </div>
 									    </div>
 									    <div class="p-2">
-									      <svg class="h-5 w-5 ml-2 fill-current" clasversion="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								             viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
-								        <path id="XMLID_11_" d="M-24,422h401.645l-72.822,72.822c-9.763,9.763-9.763,25.592,0,35.355c9.763,9.764,25.593,9.762,35.355,0
-								            l115.5-115.5C460.366,409.989,463,403.63,463,397s-2.634-12.989-7.322-17.678l-115.5-115.5c-9.763-9.762-25.593-9.763-35.355,0
-								            c-9.763,9.763-9.763,25.592,0,35.355l72.822,72.822H-24c-13.808,0-25,11.193-25,25S-37.808,422-24,422z"/>
-								        </svg>
+									    	<a href="https://mikhacavin.com/dribble" target="_blank">
+								        <svg class="h-5 w-5 ml-2 fill-current text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+										  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+										</svg>
+								        </a>
 									    </div>
 									  </div>
 
 
+									<!-- footer -->
+									<p class="text-center text-gray-400 text-xs p-3">Copyright © 2019 - Present. <br> <span class="text-purple-600">@mikhacavin</span> </p>
+
 								</div>
 
+
                         </div>
+
+
+
                     </div>
+
                 </main>
+
             </div>
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
